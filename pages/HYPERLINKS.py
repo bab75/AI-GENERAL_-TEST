@@ -70,6 +70,8 @@ def generate_urls(symbol):
         "stockinvest.us(AI)": f"https://stockinvest.us/stock/{symbol}",
         "stocktwits.com(sentiment)": f"https://stocktwits.com/symbol/{symbol}", 
         "swingtradebot.com(information)": f"https://swingtradebot.com/equities/{symbol}",
+        "simfin": f"https://app.simfin.com/",
+        "nexustrade.io(AI)": f"https://nexustrade.io/stock/{symbol}"        
         
       }
     return base_urls
@@ -228,7 +230,7 @@ def main():
             with col1:
                 st.markdown('<div class="section-header analysis-tools">📊 Analysis Tools</div>', unsafe_allow_html=True)
                 for site in ["profitviz","crowdbullish","streamlined","revvinvest","StockAnalysis","zacks","barchart","marketchameleon","finviz","finra","public.com","whalewisdom.com",
-                              "wallstreetzen","tipranks","compoundeer","stockrover","altindex","stockinvest.us(AI)","stocktwits.com(sentiment)","swingtradebot.com(information)"]:
+                              "wallstreetzen","tipranks","compoundeer","stockrover","altindex","stockinvest.us(AI)","stocktwits.com(sentiment)","swingtradebot.com(information)","simfin"]:
                     st.markdown(f'<div class="link-card"><a href="{urls[site]}" target="_blank">{site.capitalize()}</a></div>', unsafe_allow_html=True)
             
             with col2:
@@ -250,7 +252,7 @@ def main():
                     st.markdown(f'<div class="link-card"><a href="{urls[site]}" target="_blank">{site.replace("_", " ").capitalize()}</a></div>', unsafe_allow_html=True)
                 
                 st.markdown('<div class="section-header other-resources">🔗 Other Resources</div>', unsafe_allow_html=True)
-                for site in ["ziggma","option-visualizer","etf-screener","moomoo","stockinvestoriq","chartmill","tickeron","GuruFocus","Research-Links","wallmine(old data)"]:
+                for site in ["ziggma","option-visualizer","etf-screener","moomoo","stockinvestoriq","chartmill","tickeron","nexustrade.io","GuruFocus","Research-Links","wallmine(old data)"]:
                     st.markdown(f'<div class="link-card"><a href="{urls[site]}" target="_blank">{site.capitalize()}</a></div>', unsafe_allow_html=True)
             
            # Replace the existing sample stock data visualization with this:
